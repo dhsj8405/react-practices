@@ -1,10 +1,10 @@
 {
-  "name": "ex02",
+  "name": "ex04",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dev-server.mjs",
+    "start": "npx webpack serve --progress",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack"
   },
@@ -12,8 +12,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.17.1",
+    "css-loader": "^6.5.1",
+    "style-loader": "^3.3.1",
     "webpack": "^5.64.2",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
   }
 }
