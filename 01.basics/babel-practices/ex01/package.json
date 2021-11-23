@@ -1,0 +1,15 @@
+{
+  "name": "ex01",
+  "version": "1.0.0",
+  "description": "Core 라이브러리\r 1. 변환(transpile) 규칙을 소스에 적용해서 변환 파일을 생성\r 2. 변환 규칙을 가지고 있지 않다.\r 3. 바벨 플러그인이 변환 규칙을 가지고 있다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.0"
+  }
+}

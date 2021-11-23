@@ -1,0 +1,17 @@
+{
+  "name": "ex04",
+  "version": "1.0.0",
+  "description": "Env Preset\r 1. 관련 플러그인들을 모아 놓고 한 번에 적용하기 위해서 미리 플러그인들을 모아 놓은 것\r 2. ECMAScript 년도별로 모아놓은 것들, stage(0, 1, 2, 3) 레벨모아 놓은 것, 3rd party(typescript, react) 등 종류 다양하다.\r 3. Env Preset은 stage 3 레벨 이상되는 문법들의 플러그인\r 4. Env preset 뿐만 아니라 다양한 플러그인들은 babel 설정을 통해서 적용할 수 있다.(babel.config.json)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
+  }
+}
