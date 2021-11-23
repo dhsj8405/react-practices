@@ -10,7 +10,7 @@ module.exports = {
     module:{
         rules: [{
             test: /\.css$/i,              //css로 끝나는 모든파일 .을 쓰기위해 이스케이프(\) 써줌 i:ignorecase
-            use: ['style-loader', 'css-loader']
+            use: ['style-loader', 'css-loader'] //순서중요
         }]
     },
     devServer: {

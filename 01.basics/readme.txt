@@ -12,3 +12,5 @@ ex08: JSX Tutorial
 
 webpack-practices
 babel-practices
+
+ LockJson을 복사해서 패키지 정보들이 있기 때문에 npm i만 하면됨
