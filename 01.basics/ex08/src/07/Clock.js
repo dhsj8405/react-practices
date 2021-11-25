@@ -7,7 +7,8 @@ export default function() {
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
     
-    const htmls = "<span>" +
+    const htmls = 
+    "<span>" +
     ('0'+hours).slice(-2) +
      ":" +
      ('0'+minutes).slice(-2) +
