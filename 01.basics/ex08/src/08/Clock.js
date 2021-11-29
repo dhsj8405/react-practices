@@ -21,7 +21,7 @@ export default function() {
             prop01=''>
             {/*
                 JSX는 HTML이 아니다!!! <!-- --> 주석은 사용할 수 없다.
-             */}
+             */} 
 
              // comment03: JSX 안에서의 주석을 사용하면 그대로 나온다.
             {('0' + (hours > 12 ? hours - 12 : hours)).slice(-2)} 

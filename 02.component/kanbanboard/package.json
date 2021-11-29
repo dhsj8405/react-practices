@@ -4,7 +4,7 @@
   "description": "ex08: JSX Tutorial",
   "main": "index.js",
   "scripts": {
-    "debug": "npx webpack serve --progress --mode development --env"
+    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development --env"
   },
   "keywords": [],
   "author": "",

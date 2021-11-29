@@ -3,7 +3,7 @@ React Practices - Component
 ex01: Property 
     1. Component 작성법
     2. data flow: top -> down
-    3, Kanbanboard - ex01
+    3. Kanbanboard - ex01
 ex02
     1. Component Styling
     2. Kanbanboard - ex02

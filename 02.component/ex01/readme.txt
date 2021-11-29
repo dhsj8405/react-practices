@@ -13,7 +13,6 @@ ex01: Property
 04. FoodList src/03 : Data Flow(top->down) : 함수 컴포넌트
 05. FoodList src/04 : validation 
 
-
 설치:
 $ npm i -D webpack webpack-cli webpack-dev-server babel-loader style-loader css-loader sass-loader node-sass @babel/core @babel/cli @babel/cli @babel/preset-env @babel/preset-react
 $ npm i react react-dom

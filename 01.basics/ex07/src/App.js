@@ -1,4 +1,4 @@
-import React from 'react';      //jsx여서 리액트를 부르진않지만  컴포넌트만들때 createelement로 바뀌므로 import하고있어야함
+import React from 'react';      //jsx여서 리액트를 부르진않지만  컴포넌트만들때 create element로 바뀌므로 import하고있어야함
 import logo from './assets/images/logo.svg';
 import './assets/css/App.css';
 

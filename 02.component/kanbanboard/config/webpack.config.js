@@ -16,7 +16,10 @@ module.exports = function(env) {
             rules: [{
                 test: /\.js$/i,      
                 exclude: /node_modules/, //정규표현식 //트랜스파일링하는데 node_modules라이브러리들은 빼라 
-                use: ['babel-loader'] 
+                loader: 'babel-loader',
+                options: {
+                    configFile: path.resolve('config/babel.config.json')
+                }
             },{
                 test: /\.(sa|sc|c)ss$/i,              //sass,scss,css로 끝나는 모든파일 : .을 쓰기위해 이스케이프(\) 써줌 i:ignorecase, sass가 scss편하게쓰게해주는것
                 use: ['style-loader', 'css-loader', 'sass-loader']  //순서중요
