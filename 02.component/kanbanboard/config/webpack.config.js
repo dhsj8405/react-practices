@@ -21,8 +21,15 @@ module.exports = function(env) {
                     configFile: path.resolve('config/babel.config.json')
                 }
             },{
+
+
+        
+       
                 test: /\.(sa|sc|c)ss$/i,              //sass,scss,css로 끝나는 모든파일 : .을 쓰기위해 이스케이프(\) 써줌 i:ignorecase, sass가 scss편하게쓰게해주는것
-                use: ['style-loader', 'css-loader', 'sass-loader']  //순서중요
+                use: [
+                    'style-loader',
+                    {loader: 'css-loader', options: { modules: env['css-modules'] !== 'fasle'} },
+                     'sass-loader']  //순서중요
             },{
                 test: /\.(png|gif|jpe?g|svg|ico|tiff?|bmp)$/i,         //$ :끝        e?g e가없어도됨 
                 type: 'asset/resource'

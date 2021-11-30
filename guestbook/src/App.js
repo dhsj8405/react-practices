@@ -1,10 +1,10 @@
 import React from 'react';
-import KanbanBoard from './KanbanBoard';
+import Guestbook from './Guestbook';
 
 export default function() {
     return (
         <div id='App'>
-          <KanbanBoard />
+          <Guestbook />
         </div>
     )
 }

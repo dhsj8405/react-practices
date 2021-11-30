@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = (env) => {
 
-    const entry = path.resolve(`src/${env.src}/index.js`);
+    const entry = path.resolve(`src/index.js`);
 
     return {
         mode: 'development',
@@ -24,7 +24,7 @@ module.exports = (env) => {
                 test: /\.(sa|sc|c)ss$/i,
                 use:[
                     'style-loader', 
-                    {loader: 'css-loader', options: { modules: env['css-modules'] !== 'false'} }, 
+                    {loader: 'css-loader', options: {modules: false} }, 
                     'sass-loader'
                 ]
             }, {
