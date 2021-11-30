@@ -7,12 +7,16 @@ export default function App() {
 
     return (
         <div
-            className={'App'}>
+            ref={outterRef}
+            className={'App'}
+            onScroll={ e => { console.log(outterRef.current.scrollTop, ':', outterRef.current.clientHeight, ":" , innerRef.current.clientHeight) } }
+            >
             <div
                 ref={ innerRef }>
+                
                 <ul>
                     { Array.from({length: 100}, (_, i) => i+1).map(i =>
-                        <li>
+                        <li key={i}>
                             { `아이템 ${i} 입니다.` }
                         </li>
                     ) }

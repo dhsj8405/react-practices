@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function TitelBar02() {
     useState()
-    const onClickHandler = () =>{
+    const onClickHandler = (e) =>{
         // no VS state.no
         console.log('TitleBar01 clicked');
     }
