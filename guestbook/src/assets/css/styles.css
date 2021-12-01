@@ -13,7 +13,7 @@ ul, ol	{ list-style-type: none }
     color: #5C5C5C;
     text-align: left;
     margin-bottom: 10px;
-    background:url('assets/images/guestbook.png') 0 0 no-repeat;
+    background:url('../images/guestbook.png') 0 0 no-repeat;
     background-size: 35px;
     padding-left:40px;
     height: 35px;
@@ -62,7 +62,7 @@ ul, ol	{ list-style-type: none }
 .Guestbook__List__Item {
     width:100%;
     margin-top:20px;
-    background:url('assets/images/user.png') 0 20px no-repeat;
+    background:url('../images/user.png') 0 20px no-repeat;
     padding-left:50px;
     position:relative;
 }
@@ -89,7 +89,7 @@ ul, ol	{ list-style-type: none }
     width:20px;
     height:20px;
     font-size:0;
-    background:url('assets/images/delete.png') 0 0 no-repeat;
+    background:url('../images/delete.png') 0 0 no-repeat;
     left:20px;
     top:40px;
     outline:none;

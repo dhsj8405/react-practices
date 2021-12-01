@@ -1,15 +1,14 @@
 import React, {Fragment, useRef} from 'react';
 import logo from '../assets/images/react-logo.png';
 
-
 export default function App() {
     const imageRef = useRef(null);
 
     const onKeyPressInput = (e) => {
-        if(e.key == 'Enter'){
+        if(e.key == 'Enter') {
             console.log(e.target.value);
         }
-    }
+    };
 
     const onFocusInput = (e) => {
         console.log('focused');
@@ -20,35 +19,35 @@ export default function App() {
     }
 
     const onMouseOverImage = (e) => {
-        console.log('mouseover', `x=${e.clientX}, y=${e.clinetY}`);
+        console.log('mouseover', `x=${e.clientX}, y=${e.clientY}`);
     }
 
     const onMouseMoveImage = (e) => {
         const offsetTop = imageRef.current.offsetTop;
         const offsetLeft = imageRef.current.offsetLeft;
-
-        console.log('mousemove', `x=${e.clientX-offsetLeft}, y=${e.clinetY-offsetTop}`);
-        // console.log('mousemove2', `x=${e.clientX}, y=${e.clinetY}`);
+        console.log('mousemove', `x=${e.clientX-offsetLeft}, y=${e.clientY-offsetTop}`);
     }
 
     const onMouseOutImage = (e) => {
-        console.log('mouseout', `x=${e.clientX}, y=${e.clinetY}`);
-    }
+        console.log('mouseout', `x=${e.clientX}, y=${e.clientY}`);
+    }    
 
     const onMouseDownImage = (e) => {
-        console.log('mousedown', `x=${e.clientX}, y=${e.clinetY}`);
-    }
-    const onMouseUpImage = (e) => {
-        console.log('mouseup', `x=${e.clientX}, y=${e.clinetY}`);
-    }
-    const onClickImage = (e) => {
-        console.log('click', `x=${e.clientX}, y=${e.clinetY}`);
-    }
-    const onDoubleClickImage = (e) => {
-        console.log('dblclick', `x=${e.clientX}, y=${e.clinetY}`);
-    }
+        console.log('mousedown', `x=${e.clientX}, y=${e.clientY}`);
+    }    
 
-    
+    const onMouseUpImage = (e) => {
+        console.log('mouseup', `x=${e.clientX}, y=${e.clientY}`);
+    }    
+
+    const onClickImage = (e) => {
+        console.log('clik', `x=${e.clientX}, y=${e.clientY}`);
+    }    
+
+    const onDoubleClickImage = (e) => {
+        console.log('dblclick', `x=${e.clientX}, y=${e.clientY}`);
+    }    
+
     return (
         <Fragment>
             <h2>ex03 - Some Examples of Event Handler</h2>
@@ -57,8 +56,7 @@ export default function App() {
                 placeholder='메세지를 입력 하세요'
                 onKeyPress={ onKeyPressInput }
                 onFocus={ onFocusInput }
-                onBlur={ onBlurInput } 
-                />
+                onBlur={ onBlurInput }/>
                 <br/>
                 <br/>
             <img
@@ -72,10 +70,10 @@ export default function App() {
                 onMouseOver={ onMouseOverImage }
                 onMouseMove={ onMouseMoveImage }
                 onMouseOut={ onMouseOutImage }
-                 onMouseDown={ onMouseDownImage }
-                 onMouseUp={ onMouseUpImage }
-                 onClick={ onClickImage }
-                 onDoubleClick={ onDoubleClickImage }
+                onMouseDown={ onMouseDownImage }
+                onMouseUp={ onMouseUpImage }
+                onClick={ onClickImage }
+                onDoubleClick={ onDoubleClickImage }
                 />
         </Fragment>
     );
