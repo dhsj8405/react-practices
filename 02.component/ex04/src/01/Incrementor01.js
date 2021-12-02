@@ -23,7 +23,7 @@ export default class extends Component {
                 </button>
                 {' '}
                 <span>{this.state.val}</span>
-                <button>
+                <button >
                     <strong>-</strong>
                 </button>
             </div>
