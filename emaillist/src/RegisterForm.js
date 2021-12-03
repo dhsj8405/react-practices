@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './assets/scss/RegisterForm.scss'
+import styles from './assets/scss/RegisterForm.scss';
 
 export default function() {
     return (

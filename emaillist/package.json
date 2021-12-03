@@ -1,7 +1,7 @@
 {
   "name": "emaillist",
   "version": "1.0.0",
-  "description": "ex08: JSX Tutorial",
+  "description": "ex08: JSX Tutorials",
   "main": "index.js",
   "scripts": {
     "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development"
