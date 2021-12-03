@@ -11,13 +11,23 @@ export default function MessageList({messages}) {
     const refForm = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log("삭제!!!!")
+    }
+    const notifyDeleteMessage = (no) => {
+        console.log('delete!!! : '+ no);
+        setIsOpen(true);
+    }
     return (
         <Fragment>
             <ul className={styles.MessageList}>
                 {messages.map(message => <Message key={`guestbook_message_${message.no}`}
                                                   no={message.no}
                                                   name={message.name}
-                                                  message={message.message} />)}
+                                                  message={message.message} 
+                                                  notifyDeleteMessage={notifyDeleteMessage}/>)}
             </ul>
             <Modal
                 isOpen={isOpen}
@@ -28,7 +38,10 @@ export default function MessageList({messages}) {
                 style={{content: {width: 350}}}>
                 <h1>비밀번호입력</h1>
                 <div>
-                    <form className={styles.DeleteForm}>
+                    <form 
+                        ref={refForm}
+                        className={styles.DeleteForm}
+                        onSubmit={handleSubmit}>
                         <label>작성시 입력했던 비밀번호를 입력 하세요.</label>
                         <input
                             type={'password'}
@@ -38,7 +51,9 @@ export default function MessageList({messages}) {
                     </form>
                 </div>
                 <div className={modalStyles['modal-dialog-buttons']}>
-                    <button>확인</button>
+                    <button onClick={() => {
+                        refForm.current.dispatchEvent(new Event("submit", {cancelable: true, bubbles: true}));
+                    }}>확인</button>
                     <button onClick={() => setIsOpen(false)}>취소</button>
                 </div>
             </Modal>
