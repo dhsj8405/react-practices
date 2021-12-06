@@ -9,14 +9,9 @@ export default function Guestbook() {
     const [messages, setMessages] = useState(data);
 
     useEffect(() => {
-        console.log('최초 메시지 리스트 가져오기')
+        console.log('최초 메세지 리스트 가져오기');        
         fetchMessageList();
-        
-    }, []); // [] 안넣으면 렌더링마다 호출됨
-
-    const fetchMessageList = () => {
-        console.log('message ');
-    }
+    }, []);
 
     const notifyMessage = {
         add: function(message) {
@@ -31,9 +26,9 @@ export default function Guestbook() {
             setMessages(messages.filter(message => message.no !== no));
         }
     }
-    
-    const fetchList = () => {
-        
+
+    const fetchMessageList = () => {
+        console.log('message list 가져오기');
     };
 
     return (
