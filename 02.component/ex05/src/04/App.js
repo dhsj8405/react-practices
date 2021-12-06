@@ -20,11 +20,11 @@ export default function App() {
     const [currentClockTime, setCurrentClockTime] = useState(getCurrentClockTime());
     const [ticks, setTicks] = useState(0)
 
-    // useEffect(() => {
-    //     setInterval(function () {
-    //         setCurrentClockTime(getCurrentClockTime());
-    //     }, 1000);
-    // }, []);
+    useEffect(() => {
+        setInterval(function () {
+            setCurrentClockTime(getCurrentClockTime());
+        }, 1000);
+    }, []);
 
     // useEffect(() => {
     //     console.log("setTimeout called")

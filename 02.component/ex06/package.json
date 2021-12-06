@@ -1,7 +1,7 @@
 {
   "name": "ex06",
   "version": "1.0.0",
-  "type" : "module",
+  "type": "module",
   "description": "1. Never Manupulate Component's state DIRECTLY!\r 2. Treat Component's State As If It were IMMUTABLE!\r 3. Always Use the setState or Method returned by useState Hook to Update the State of Ccomponent!",
   "main": "index.js",
   "scripts": {
@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react-addons-update": "^15.6.3"
+  }
 }
