@@ -9,8 +9,8 @@ export default function Guestbook() {
     const [messages, setMessages] = useState(data);
 
     useEffect(() => {
-        console.log('최초 메세지 리스트 가져오기');        
-        fetchMessageList();
+        
+        fetchMessages();
     }, []);
 
     const notifyMessage = {
@@ -27,8 +27,30 @@ export default function Guestbook() {
         }
     }
 
-    const fetchMessageList = () => {
-        console.log('message list 가져오기');
+    const fetchMessages = async() => {
+        try{
+            const startNo = messages.length == 0 ? 0 : messages[messages.length-1].no;
+            const response = await fetch(`/api/${startNo}`,{
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            });
+
+            if(!response.ok){
+                throw new Error(`${response.status} ${response.status}`)
+            }
+            const json = await response.json();
+
+            if(json.result !== 'success'){
+                throw json.message;
+            }
+            setMessages([...messages, ...json.data])        //... 스프레드 앞에 채워넣는거
+            console.log(json.data)
+        } catch(err){
+            console.error(err);
+        }
     };
 
     return (
