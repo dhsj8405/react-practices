@@ -11,8 +11,8 @@
             }
         }],
         "@babel/react"
-    ],"plugins": [
+    ],
+    "plugins": [
         "@babel/plugin-transform-runtime"
-   ]
-
+    ]
 }

@@ -1,12 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import RegisterForm from './RegisterForm';
 import SearchBar from './SearchBar';
 import Emaillist from './Emaillist';
 
 import './assets/scss/App.scss';
-import data from './assets/json/data.json';
+// import data from './assets/json/data.json';
 
 export default function() {
+    const [emails, setEmails] = useState([]);
     const [keyword, setKeyword] = useState('');
 
     const notifyKeywordChanged = (keyword) => {
@@ -14,18 +15,13 @@ export default function() {
     };
 
     useEffect(async () => {
-      try{
-        const response = await fetch('http://localhost:8888/api', {
+      try {
+        const response = await fetch('/api', {
           method: 'get',
-          mode: 'cors',                    // no-cors, cors, same-origin*
-          credentials: 'same-origin',             // include, omit, same-origin*
-          cache: 'no-cache',                      // no-cache, reload, force-cache, default *
-          headers: {              
-            'Content-Type': 'application/json',   // cf. application/x-www-form-urlencoded
-            'Accept': 'application/json'          // cf. text/html
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application'
           },
-          redirect: 'follow',                     // follow*, error, manual(response.url)
-          referrer: 'client',                     // no-referrer, *client
           body: null
         });
 
